@@ -83,19 +83,6 @@ export default function Home() {
         </section>
 
         <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
-          <div className="space-y-8 sm:space-y-10">
-            <div className="space-y-6">
-              <p className="text-sm uppercase tracking-[0.24em] text-slate/60">Champion Shipping Logistics LLC</p>
-              <h2 className="text-balance text-2xl font-semibold text-slate sm:text-3xl">Local Guides</h2>
-              <p className="max-w-xl text-pretty text-base leading-8 text-slate/80">
-                Explore service coverage across the United States. Hover a state to see its name.
-              </p>
-            </div>
-            <LocalGuidesMap selectedState={selectedState} onStateClick={setSelectedState} />
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
           <div className="space-y-6">
             <p className="text-sm uppercase tracking-[0.24em] text-slate/60">Service Locations</p>
             <h2 className="text-balance text-2xl font-semibold text-slate sm:text-3xl">Company Locations Across America</h2>
@@ -121,6 +108,19 @@ export default function Home() {
                 )}
               </div>
             )}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
+          <div className="space-y-8 sm:space-y-10">
+            <div className="space-y-6">
+              <p className="text-sm uppercase tracking-[0.24em] text-slate/60">Champion Shipping Logistics LLC</p>
+              <h2 className="text-balance text-2xl font-semibold text-slate sm:text-3xl">Local Guides</h2>
+              <p className="max-w-xl text-pretty text-base leading-8 text-slate/80">
+                Explore service coverage across the United States. Hover a state to see its name.
+              </p>
+            </div>
+            <LocalGuidesMap selectedState={selectedState} onStateClick={setSelectedState} />
           </div>
         </section>
 
