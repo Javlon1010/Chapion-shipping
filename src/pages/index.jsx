@@ -110,11 +110,15 @@ export default function Home() {
             {selectedState && (
               <div className="mt-8 rounded-[2rem] bg-white p-6 shadow-soft">
                 <h3 className="text-xl font-semibold text-slate">{selectedState} Locations</h3>
-                <ul className="mt-4 space-y-2">
-                  {stateData[selectedState].map((address, idx) => (
-                    <li key={idx} className="text-sm text-slate/80">{address}</li>
-                  ))}
-                </ul>
+                {stateData[selectedState] ? (
+                  <ul className="mt-4 space-y-2">
+                    {stateData[selectedState].map((address, idx) => (
+                      <li key={idx} className="text-sm text-slate/80">{address}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="mt-4 text-sm text-slate/80">Our services are not available in this state.</p>
+                )}
               </div>
             )}
           </div>
